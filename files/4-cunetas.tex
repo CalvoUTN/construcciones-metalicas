@@ -1,0 +1,41 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\section{Cunetas}
+
+\subsection{Condiciones preliminares}
+Para dimensionar las cunetas se establecieron las siguientes condiciones:
+
+\begin{equation*}
+\text{Para evitar sedimentaciones y/o erosiones} \rightarrow
+\begin{cases}
+V_{max} = 1,2 \text{m/seg} \\
+V_{min} = 0,3 \text{m/seg}
+\end{cases}
+\end{equation*}
+
+\begin{equation*}
+\text{Para asegurar el escurrimiento} \\ \text{sin producir daños en la estructura} \rightarrow
+\begin{cases}
+H. Agua_{max} = 0,80 \text{m/seg} \\
+H. Agua_{min} = 0,25 \text{m/seg}
+\end{cases}
+\end{equation*}
+
+\subsection{Dimensionamiento}
+Para el dimensionamiento se utilizó una cuneta trapezoidal y las expresiones de continuidad y Manning desarrolladas en \cref{continuidad} y \cref{manning}. \cite{presentaciones}
+
+\begin{align}
+    V &= \frac{Q}{A} \label{continuidad} \\
+    V &= \frac{R^{2/3}*i^{1/2}}{\eta} \label{manning}
+\end{align}
+
+Se igualaron las velocidades y se las reordenó de forma tal que en uno de los términos se obtenga lo siguiente:
+
+\begin{equation}
+    \frac{Q*\eta}{i^{1/2}} = \frac{[b*h + x*h^2]^{5/3}}{[b + 2*h*(1+x^2)^{1/2}]^{2/3}}
+\end{equation}
+
+Luego, por un proceso iterativo se resuelve la ecuación anterior para determinar el valor de $h$, de forma tal que el valor adoptado verifica que la velocidad y el tirante  del agua cumplan con las condiciones iniciales.
+\end{document}
